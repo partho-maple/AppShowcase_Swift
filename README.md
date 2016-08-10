@@ -55,15 +55,15 @@ Ever wanted a way of easily showing all your iOS applications to your app users 
 
 - AppShowcase downloads all its data directly from the App Store. So the next thing you will need to do is to set your developer name so that AppShowcase knows which applications to show. 
 
-Open the ‘AppShowcaseView.h’ file.
+Open the ‘AppShowcaseView.swift’ file.
 
 - Edit the line of code called ‘DEV_NAME’ and replace ‘parthobiswas’ with your developer name.
 
-```objective-c
+```swift
 
 // Replace 'parthobiswas' with your developer name. make sure your
 // developer name is typed like the above with no spaces or capital letters.
-#define DEV_NAME @"parthobiswas"
+let DEV_NAME = "parthobiswas"
 
 ```
 
@@ -71,14 +71,13 @@ Open the ‘AppShowcaseView.h’ file.
 Some developers like to add a ‘more apps’ button in the info page section of there apps. This is up to you. For the purposes of this
 tutorial, we will be opening the AppShowcase view with a simple IBAction like so:
 
-```objective-c
+```swift
 
--(IBAction)open_gallery {
-
-    UIStoryboard *gallery = [UIStoryboard storyboardWithName:@"AppShowcase" bundle:nil];
-    AppShowcaseView *view = [gallery instantiateInitialViewController];
-    [self presentViewController:view animated:YES completion:nil];
-}
+    @IBAction func open_gallery() {
+        let gallery: UIStoryboard = UIStoryboard(name: "AppShowcase", bundle: nil)
+        let view = gallery.instantiateInitialViewController()
+        self.presentViewController(view!, animated: true, completion: { _ in })
+    }
 
 ```
 
