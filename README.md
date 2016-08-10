@@ -1,4 +1,6 @@
-# AppShowcase (Objective-C)
+# AppShowcase (Swift)
+
+- [x] An Objective-C version is available at this link: https://github.com/partho-maple/AppShowcase
 
 Ever wanted a way of easily showing all your iOS applications to your app users ? AppShowcase does just that and helps you gain the attention you need to gain more app downloads. AppShowcase allows you to cross promote your iOS applications in all of your iOS applications.
 
